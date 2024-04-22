@@ -1,0 +1,128 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN1qQornvnxr+9JnugUXopR",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Rohit-Dogra/Big-Data/blob/main/Assignmnet7\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Th419RhqHJ-m",
+        "outputId": "a44b8858-2183-47fe-c902-ae546c163b85"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[6 3 5 4 2 1]\n"
+          ]
+        }
+      ],
+      "source": [
+        "import numpy as np\n",
+        "arr1=np.array([1, 2, 4, 5, 3, 6])\n",
+        "arr2=np.flip(arr1)\n",
+        "print(arr2)\n",
+        ""
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "\n",
+        "arr1 = np.array([[1, 2], [3, 4]])\n",
+        "arr2 = np.array([[1, 2], [3, 4]])\n",
+        "\n",
+        "print(\"arr1:\")\n",
+        "print(arr1)\n",
+        "\n",
+        "print(\"arr2:\")\n",
+        "print(arr2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4zyJcaeAHVR7",
+        "outputId": "51c20b0e-60b5-4d6e-d5a6-125533428282"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "arr1:\n",
+            "[[1 2]\n",
+            " [3 4]]\n",
+            "arr2:\n",
+            "[[1 2]\n",
+            " [3 4]]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "gfg = np.matrix('[4, 1, 9; 12, 3, 1; 4, 5, 6]')\n",
+        "soae= np.sum(gfg)\n",
+        "soaerw=np.sum(gfg,axis=1)\n",
+        "soaecw=np.sum(gfg,axis=0)\n",
+        "print(\"Sum elements:\", soae)\n",
+        "print(\"Sum row-wise\",soaerw)\n",
+        "print(\"Sum column-wise\",soaecw)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9ElWfLCOHW5a",
+        "outputId": "0907287d-571d-40a6-84e2-344865787a12"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Sum elements: 45\n",
+            "Sum row-wise [[14]\n",
+            " [16]\n",
+            " [15]]\n",
+            "Sum column-wise [[20  9 16]]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
