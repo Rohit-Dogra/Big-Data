@@ -1,0 +1,122 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMDIWwzoxAcXH1oFEV08dCY",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Rohit-Dogra/Big-Data/blob/main/Assignment2%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "arr1 = np.array([[1, 2], [3, 4]])\n",
+        "arr2 = np.array([[1, 2], [3, 4]])\n",
+        "are_equal = np.array_equal(arr1, arr2)\n",
+        "if are_equal:\n",
+        "    print(\"Arrays are equal.\")\n",
+        "else:\n",
+        "    print(\"Arrays are not equal.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5uqxMnOGGsUf",
+        "outputId": "cde0e0de-8086-4c5a-e5ad-41b7a684acdd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Arrays are equal.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "arr1=np.array([1, 2, 3, 6, 4, 5])\n",
+        "arr2=np.flip(arr1)\n",
+        "print(arr2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DB1Xg1z1GwCx",
+        "outputId": "40b277f2-68c3-47fd-e0d7-c6d1dc335798"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[5 4 6 3 2 1]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "x = np.array([1, 2, 3, 4, 5, 1, 2, 1, 1, 1])\n",
+        "y = np.array([1, 1, 1, 2, 3, 4, 2, 4, 3, 3, ])\n",
+        "most_frequent_value1, counts1 = np.unique(x, return_counts=True)\n",
+        "most_frequent_value2, counts2 = np.unique(y, return_counts=True)\n",
+        "most_frequent_index1 = np.where(x == most_frequent_value1[counts1.argmax()])[0]\n",
+        "most_frequent_index2 = np.where(y == most_frequent_value2[counts2.argmax()])[0]\n",
+        "print(\"Most frequent value:\", most_frequent_value1[counts1.argmax()])\n",
+        "print(\"Indices:\", most_frequent_index1)\n",
+        "print(\"Most frequent value:\", most_frequent_value2[counts2.argmax()])\n",
+        "print(\"Indices:\", most_frequent_index2)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ERqlX56-GzB4",
+        "outputId": "e7c08c35-a880-43b8-c484-aff0a0d72102"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Most frequent value: 1\n",
+            "Indices: [0 5 7 8 9]\n",
+            "Most frequent value: 1\n",
+            "Indices: [0 1 2]\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
